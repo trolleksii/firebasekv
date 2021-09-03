@@ -1,4 +1,4 @@
-module github.com/trolleksii/firebasekv
+module github.com/trolleksii/firestorekv
 
 go 1.17
 
