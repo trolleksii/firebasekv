@@ -1,4 +1,4 @@
-# firebasekv
+# FirestoreKV
 
 Small CLI tool to store/retrieve key/value pairs in GCP Firestore(in Datastore mode).
 
@@ -18,13 +18,13 @@ There are 3 commands implemented: `get`, `put`, and `clean`.
 The syntax is following:
 
 ```SH
-./firebasekv put <KIND> <KEY> <VALUE>
+./firestorekv put <KIND> <KEY> <VALUE>
 ```
 
 For example:
 
 ```SH
-./firebasekv put numbers the_number 42
+./firestorekv put numbers the_number 42
 ```
 
 ### Retrieving values
@@ -32,13 +32,13 @@ For example:
 The syntax is following:
 
 ```SH
-./firebasekv get <KIND> <KEY>
+./firestorekv get <KIND> <KEY>
 ```
 
 For example:
 
 ```SH
-./firebasekv get numbers the_number
+./firestorekv get numbers the_number
 ```
 
 ### Cleanup old key/value pairs
@@ -48,12 +48,12 @@ All key/value pairs get timestamp field during creation/update. This allows to c
 The syntax is following:
 
 ```SH
-./firebasekv clean <TIMESTAMP>
+./firestorekv clean <TIMESTAMP>
 ```
 
 For example:
 
 ```SH
 week_ago=$(date --date="7 days ago" +%s)
-./firebasekv clean passwords $week_ago
+./firestorekv clean passwords $week_ago
 ```
